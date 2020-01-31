@@ -1,0 +1,12 @@
+! Keepalived HAPROXY HA instance
+
+  vrrp_instance VI_1 {
+      state MASTER
+      interface ens160
+      virtual_router_id 100
+      priority 100
+      advert_int 1
+      virtual_ipaddress {
+          10.0.6.6
+      }
+  }
